@@ -49,9 +49,9 @@ export function SocketProvider({ children }: { children: ReactNode }) {
       }
     });
 
-    sock.on('typing:stop', ({ channelId, username }) => {
+    sock.on('typing:stop', ({ channelId, userId }) => {
       const current = useChatStore.getState().typingUsers[channelId] || [];
-      setTyping(channelId, current.filter((u) => u !== username));
+      setTyping(channelId, current.filter((u) => u !== userId));
     });
 
     return () => {

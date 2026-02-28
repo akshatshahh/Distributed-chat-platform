@@ -6,7 +6,7 @@ import { useSocket } from '@/providers/SocketProvider';
 export function MessageInput({ channelId }: { channelId: string }) {
   const [content, setContent] = useState('');
   const socket = useSocket();
-  const typingTimeout = useRef<ReturnType<typeof setTimeout>>();
+  const typingTimeout = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const handleTyping = useCallback(() => {
     if (!socket) return;
