@@ -1,0 +1,25 @@
+{
+  "name": "@chat/shared-utils",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "@chat/shared-types": "workspace:*",
+    "ioredis": "^5.4.0",
+    "jsonwebtoken": "^9.0.0",
+    "pino": "^9.6.0",
+    "prom-client": "^15.1.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.0",
+    "knex": "^3.1.0",
+    "typescript": "^5.7.0"
+  }
+}

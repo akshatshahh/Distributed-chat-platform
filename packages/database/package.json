@@ -1,0 +1,23 @@
+{
+  "name": "@chat/database",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "migrate:latest": "knex migrate:latest --knexfile src/knexfile.ts",
+    "migrate:rollback": "knex migrate:rollback --knexfile src/knexfile.ts",
+    "migrate:status": "knex migrate:status --knexfile src/knexfile.ts",
+    "seed:run": "knex seed:run --knexfile src/knexfile.ts"
+  },
+  "dependencies": {
+    "knex": "^3.1.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "ts-node": "^10.9.0"
+  }
+}
